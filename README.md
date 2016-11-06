@@ -29,7 +29,7 @@ allprojects {
 Then add the dependency:
 ```
 dependencies {
-        compile 'com.github.ehehhh:Gooey-Loader:v1.1.0'
+        compile 'com.github.ehehhh:Gooey-Loader:v1.1.1'
 }
 ```
 

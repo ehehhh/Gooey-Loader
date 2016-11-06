@@ -32,6 +32,8 @@ class SmallGooBall implements GooBall {
             } else {
                 xPercentage = 0.46f + (0.08f * ((interpolation - FIRST_QUARTER) / (LAST_QUARTER - FIRST_QUARTER)));
             }
+        } else {
+            xPercentage = 0;
         }
     }
 
