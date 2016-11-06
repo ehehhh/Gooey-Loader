@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="GooeyLoaderView">
+        <attr name="glv_color" format="color" />
+        <!-- This should be a value in the range 1000 - 7000 ms. -->
+        <attr name="glv_duration_in_ms" format="integer" />
+    </declare-styleable>
+</resources>
