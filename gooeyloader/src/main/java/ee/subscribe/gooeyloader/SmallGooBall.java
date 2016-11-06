@@ -26,11 +26,11 @@ class SmallGooBall implements GooBall {
         interpolation -= startDelay;
         if (interpolation >= 0 && interpolation <= ANIMATION_DURATION_PERCENTAGE) {
             if (interpolation < FIRST_QUARTER) {
-                xPercentage = 0.5f * DECELERATE_INTERPOLATOR.getInterpolation(interpolation / FIRST_QUARTER);
+                xPercentage = 0.46f * DECELERATE_INTERPOLATOR.getInterpolation(interpolation / FIRST_QUARTER);
             } else if (interpolation > LAST_QUARTER) {
-                xPercentage = 0.5f + (0.5f * ACCELERATE_INTERPOLATOR.getInterpolation((interpolation - LAST_QUARTER) / FIRST_QUARTER));
+                xPercentage = 0.54f + (0.46f * ACCELERATE_INTERPOLATOR.getInterpolation((interpolation - LAST_QUARTER) / FIRST_QUARTER));
             } else {
-                xPercentage = 0.5f;
+                xPercentage = 0.46f + (0.08f * ((interpolation - FIRST_QUARTER) / (LAST_QUARTER - FIRST_QUARTER)));
             }
         }
     }

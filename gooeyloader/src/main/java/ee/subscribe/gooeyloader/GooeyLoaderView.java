@@ -175,11 +175,11 @@ public class GooeyLoaderView extends View implements CallbackAnimation.Transform
         if (!ball.isMainBall()) {
             final float mainBallXPercentage = mainBall.getXPercentage();
             final float smallBallXPercentage = ball.getXPercentage();
-            return mainBallXPercentage > 0.45f &&
-                    mainBallXPercentage < 0.55f &&
+            return mainBallXPercentage > 0.44f &&
+                    mainBallXPercentage < 0.56f &&
                     mainBall.getRadiusPercentage() > SMALLEST_BALL_RADIUS_PERCENTAGE &&
-                    smallBallXPercentage > 0.4f &&
-                    smallBallXPercentage < 0.6f;
+                    ((smallBallXPercentage > 0.38f && smallBallXPercentage < 0.48f) ||
+                            (smallBallXPercentage < 0.62f && smallBallXPercentage > 0.52f));
         } else {
             return false;
         }

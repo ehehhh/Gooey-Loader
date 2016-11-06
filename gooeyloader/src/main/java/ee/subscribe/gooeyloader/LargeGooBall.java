@@ -24,13 +24,13 @@ class LargeGooBall implements GooBall {
     @Override
     public void setCurrentInterpolation(float interpolation) {
         if (interpolation < FIRST_QUARTER_END) {
-            xPercentage = 0.5f * DECELERATE_INTERPOLATOR.getInterpolation(interpolation / FIRST_QUARTER_END);
+            xPercentage = 0.46f * DECELERATE_INTERPOLATOR.getInterpolation(interpolation / FIRST_QUARTER_END);
             radiusPercentage = SMALLEST_BALL_RADIUS_PERCENTAGE;
         } else if (interpolation > LAST_QUARTER_START) {
-            xPercentage = 0.5f + (0.5f * ACCELERATE_INTERPOLATOR.getInterpolation((interpolation - LAST_QUARTER_START) / FIRST_QUARTER_END));
+            xPercentage = 0.54f + (0.46f * ACCELERATE_INTERPOLATOR.getInterpolation((interpolation - LAST_QUARTER_START) / FIRST_QUARTER_END));
             radiusPercentage = SMALLEST_BALL_RADIUS_PERCENTAGE;
         } else {
-            xPercentage = 0.5f;
+            xPercentage = 0.46f + (0.08f * ((interpolation - FIRST_QUARTER_END) / (LAST_QUARTER_START - FIRST_QUARTER_END)));
             float radiusFactor;
             if (interpolation < FIRST_RADIUS_DIV_END) {
                 radiusFactor = (interpolation - FIRST_QUARTER_END) / RADIUS_DIV;
