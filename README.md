@@ -17,7 +17,21 @@ Allowed duration range is 1000 - 7000 ms.
 Default color is `#9c27b0` and default animation duration is `3500` ms.
 
 ### Including In Your Project
-Coming soon...
+In your root build.gradle add at the end of repositories:
+```
+allprojects {
+        repositories {
+                ...
+                maven { url "https://jitpack.io" }
+        }
+}
+```
+Then add the dependency:
+```
+dependencies {
+        compile 'com.github.ehehhh:Gooey-Loader:v1.0.0'
+}
+```
 
 ### License
 
