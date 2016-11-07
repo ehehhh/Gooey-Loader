@@ -8,13 +8,12 @@ Just include in your layout:
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 ```
-Animation duration and color can be configured:
-```
-glv_color="@color/yourColor"
-glv_duration_in_ms="3000"
-```
-Allowed duration range is 1000 - 7000 ms.
-Default color is `#9c27b0` and default animation duration is `3500` ms.
+
+### Attributes
+| Attribute | Description |
+| --- | --- |
+| `glv_color` | Color of the balls (default is #9c27b0) |
+| `glv_duration_in_ms` | Animation duration in ms (default is 3500ms, limits are 1000-7000ms) |
 
 ### Including In Your Project
 In your root build.gradle add at the end of repositories:
